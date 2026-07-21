@@ -375,3 +375,56 @@ margin:30px;
     transition:1s;
 
 }
+
+@media screen and (max-width: 768px){
+
+    #contenedorImagenes{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        width:95%;
+
+        padding-top:120px;
+
+    }
+
+    .foto{
+
+        width:100%;
+
+        max-width:400px;
+
+        margin:auto;
+
+    }
+    #textoRecuerdos{
+
+    font-size:40px;
+
+    width:90%;
+
+}
+
+#linea1{
+
+    font-size:50px;
+
+}
+
+#linea2{
+
+    font-size:35px;
+
+}
+
+#btnFinal{
+
+    font-size:18px;
+
+    padding:15px 30px;
+
+}
+
+}
