@@ -1,0 +1,377 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#12001f;
+
+font-family:Poppins;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+section{
+
+width:100%;
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+#inicio{
+
+background:linear-gradient(135deg,#ff8ed7,#9d5cff);
+
+text-align:center;
+
+}
+
+#inicio h1{
+
+font-size:90px;
+
+font-family:'Great Vibes';
+
+}
+
+#inicio h2{
+
+font-weight:300;
+
+}
+
+button{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+margin-top:40px;
+
+cursor:pointer;
+
+font-size:20px;
+
+background:white;
+
+color:#d63384;
+
+}
+
+#carta{
+
+display:none;
+
+max-width:900px;
+
+text-align:center;
+
+background:#1d1035;
+
+}
+
+#carta h1{
+
+font-size:70px;
+
+font-family:'Great Vibes';
+
+margin-bottom:30px;
+
+}
+
+#texto{
+
+font-size:24px;
+
+line-height:2;
+
+white-space:pre-line;
+
+}
+
+#galeria{
+
+display:none;
+
+background:black;
+
+}
+
+
+#contenedorImagenes{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 70px;
+
+    padding-top: 180px;
+    padding-bottom: 120px;
+
+
+
+}
+
+.foto{
+
+    width:100%;
+    height:auto;
+
+    display:block;
+
+    border-radius:20px;
+
+    object-fit:cover;
+
+    box-shadow:0 0 30px rgba(255,180,230,.7);
+
+    transition:.8s;
+
+    opacity:0;
+
+    transform:scale(.85);
+
+}
+
+.foto.visible{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+.final{
+
+margin:150px 0;
+
+text-align:center;
+
+}
+
+.final h2{
+
+font-size:50px;
+
+margin:30px;
+
+}
+
+#textoRecuerdos {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+
+    width: 90%;
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 65px;
+
+    color: rgba(255, 215, 100, 0.85);
+
+    pointer-events: none;
+
+    opacity: 1;
+
+    transition: opacity 1.5s ease;
+
+    text-shadow:
+        0 0 5px rgba(255, 230, 150, 0.9),
+        0 0 15px rgba(255, 190, 60, 0.7),
+        0 2px 8px rgba(0, 0, 0, 0.5);
+
+        background:rgba(0,0,0,.18);
+
+    backdrop-filter:blur(8px);
+
+    padding:18px 40px;
+
+    border-radius:40px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+#continuar {
+
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+
+#continuar.activo {
+
+    opacity: 1;
+
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#btnFinal{
+
+    margin-top:40px;
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(45deg,#ff4da6,#ff80bf);
+
+    box-shadow:0 0 25px rgba(255,100,180,.6);
+
+    transition:.4s;
+
+}
+
+#btnFinal:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 40px rgba(255,100,180,1);
+
+}
+
+
+#lluviaCorazones{
+
+    position:fixed;
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:9998;
+
+}
+
+
+
+@keyframes caer{
+
+    from{
+
+        transform:translateY(-100px);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(110vh);
+
+        opacity:0;
+
+    }
+
+}
+
+#overlayFinal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    z-index:99999;
+
+}
+
+#mensajeFinal{
+
+    text-align:center;
+
+    z-index:100000;
+
+}
+
+#linea1{
+
+    font-size:85px;
+
+    color:#FFD700;
+
+    font-family:'Great Vibes';
+
+    text-shadow:
+        0 0 8px black,
+        0 0 20px black,
+        0 0 40px black;
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+#linea2{
+
+    margin-top:20px;
+
+    font-size:60px;
+
+    color:white;
+
+    font-family:Poppins;
+
+    text-shadow:
+        0 0 10px black,
+        0 0 30px black;
+
+    opacity:0;
+
+    transition:1s;
+
+}
